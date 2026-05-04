@@ -1,0 +1,63 @@
+{
+  "example_count": 300,
+  "files": {
+    "examples": "datasets/generated/benchmark_v1.jsonl",
+    "fixtures": "datasets/fixtures/benchmark_v1_fixtures.jsonl",
+    "manifest": "datasets/generated/benchmark_v1_manifest.json"
+  },
+  "formats": [
+    "raw_cli",
+    "rtk_style",
+    "structured_json",
+    "compact_json",
+    "task_focused_json"
+  ],
+  "instances_per_task": 30,
+  "name": "llm-cli-structured-output-benchmark-v1",
+  "reference_date": "2026-05-04",
+  "seed": 20260504,
+  "task_count": 10,
+  "tasks": {
+    "task_01_largest_file": {
+      "answer_type": "file_path",
+      "question": "Which file is the largest?"
+    },
+    "task_02_newest_file": {
+      "answer_type": "file_path",
+      "question": "Which file was modified most recently?"
+    },
+    "task_03_extension_count": {
+      "answer_type": "integer",
+      "question": "How many files have the `.log` extension?"
+    },
+    "task_04_pattern_file_count": {
+      "answer_type": "integer",
+      "question": "How many files contain the word `ERROR`?"
+    },
+    "task_05_pattern_occurrence_count": {
+      "answer_type": "integer",
+      "question": "How many total `ERROR` occurrences are there?"
+    },
+    "task_06_first_failure": {
+      "answer_type": "event",
+      "question": "Which file contains the earliest `FAIL` event?"
+    },
+    "task_07_total_line_count": {
+      "answer_type": "integer",
+      "question": "What is the total number of lines across all `.log` files?"
+    },
+    "task_08_average_file_size": {
+      "answer_type": "number",
+      "question": "What is the average size in bytes of `.json` files?"
+    },
+    "task_09_largest_log_error_count": {
+      "answer_type": "composite",
+      "question": "In the largest `.log` file, how many `ERROR` entries are there?"
+    },
+    "task_10_stale_large_file_detection": {
+      "answer_type": "file_path_list",
+      "question": "Which files are larger than 1 MB and have not been modified in the last 30 days?"
+    }
+  },
+  "version": "0.1.0"
+}

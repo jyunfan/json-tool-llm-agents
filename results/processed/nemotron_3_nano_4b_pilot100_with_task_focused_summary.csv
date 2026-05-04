@@ -1,0 +1,6 @@
+model,format,examples,success_rate,valid_json_rate,error_rate,mean_latency_seconds
+nemotron-3-nano:4b,compact_json,100,0.37,0.98,0.02,5.977
+nemotron-3-nano:4b,raw_cli,100,0.43,1.0,0.0,4.451
+nemotron-3-nano:4b,rtk_style,100,0.26,1.0,0.0,4.533
+nemotron-3-nano:4b,structured_json,100,0.41,0.98,0.02,7.299
+nemotron-3-nano:4b,task_focused_json,100,0.7,1.0,0.0,2.966

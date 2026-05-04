@@ -1,0 +1,43 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "properties": {
+    "example_id": {
+      "type": "string"
+    },
+    "expected_answer_type": {
+      "type": "string"
+    },
+    "fixture_id": {
+      "type": "string"
+    },
+    "ground_truth": {
+      "type": "object"
+    },
+    "question": {
+      "type": "string"
+    },
+    "task_id": {
+      "type": "string"
+    },
+    "tool_outputs": {
+      "required": [
+        "raw_cli",
+        "rtk_style",
+        "structured_json",
+        "compact_json",
+        "task_focused_json"
+      ],
+      "type": "object"
+    }
+  },
+  "required": [
+    "example_id",
+    "task_id",
+    "fixture_id",
+    "question",
+    "tool_outputs",
+    "ground_truth"
+  ],
+  "title": "Benchmark V1 Example",
+  "type": "object"
+}
